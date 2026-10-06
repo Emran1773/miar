@@ -1,0 +1,343 @@
+{
+  "app": {
+    "name": "أثر",
+    "name_en": "Athar",
+    "version": "1.0.0",
+    "description": "منصة شخصية لتوثيق الإنجازات والأهداف والمهارات والعادات والتقدم.",
+    "language": "ar",
+    "direction": "rtl",
+    "theme": "light"
+  },
+
+  "user": {
+    "name": "عمران",
+    "level": 4,
+    "score": 78,
+    "levelProgress": 68,
+    "streak": 12,
+    "totalAchievements": 18,
+    "unlockedAchievements": 12
+  },
+
+  "stats": {
+    "goals": 7,
+    "completedGoals": 4,
+    "habits": 7,
+    "completedHabits": 5,
+    "skills": 6,
+    "achievements": 18,
+    "unlockedAchievements": 12
+  },
+
+  "goals": [
+    {
+      "id": 1,
+      "title": "إتقان التصميم",
+      "description": "تطوير مهارات التصميم والوصول إلى مستوى متقدم.",
+      "category": "مهارة",
+      "progress": 82,
+      "status": "مستمر",
+      "icon": "✦"
+    },
+    {
+      "id": 2,
+      "title": "إنهاء المشروع",
+      "description": "إتمام المشروع الشخصي وإخراجه بصورة احترافية.",
+      "category": "مشروع",
+      "progress": 64,
+      "status": "مستمر",
+      "icon": "◆"
+    },
+    {
+      "id": 3,
+      "title": "بناء معرض الأعمال",
+      "description": "جمع أفضل الأعمال في ملف شخصي واحد.",
+      "category": "إنجاز",
+      "progress": 91,
+      "status": "قريباً",
+      "icon": "▣"
+    },
+    {
+      "id": 4,
+      "title": "تعلم البرمجة",
+      "description": "الاستمرار في تطوير مهارات البرمجة وبناء المشاريع.",
+      "category": "تعلم",
+      "progress": 57,
+      "status": "مستمر",
+      "icon": "⌘"
+    },
+    {
+      "id": 5,
+      "title": "قراءة 20 كتاباً",
+      "description": "إتمام مجموعة مختارة من الكتب خلال العام.",
+      "category": "قراءة",
+      "progress": 70,
+      "status": "مستمر",
+      "icon": "▤"
+    },
+    {
+      "id": 6,
+      "title": "مشروع جديد",
+      "description": "تحويل فكرة جديدة إلى منتج رقمي متكامل.",
+      "category": "مشروع",
+      "progress": 35,
+      "status": "جديد",
+      "icon": "＋"
+    }
+  ],
+
+  "skills": [
+    {
+      "id": 1,
+      "name": "التصميم",
+      "progress": 88,
+      "icon": "✦"
+    },
+    {
+      "id": 2,
+      "name": "البرمجة",
+      "progress": 76,
+      "icon": "⌘"
+    },
+    {
+      "id": 3,
+      "name": "صناعة المحتوى",
+      "progress": 71,
+      "icon": "◈"
+    },
+    {
+      "id": 4,
+      "name": "التعليق الصوتي",
+      "progress": 62,
+      "icon": "◉"
+    },
+    {
+      "id": 5,
+      "name": "تحرير الفيديو",
+      "progress": 79,
+      "icon": "▶"
+    },
+    {
+      "id": 6,
+      "name": "الذكاء الاصطناعي",
+      "progress": 84,
+      "icon": "✧"
+    }
+  ],
+
+  "habits": [
+    {
+      "id": 1,
+      "name": "القراءة",
+      "description": "قراءة يومية",
+      "completed": true,
+      "streak": 12
+    },
+    {
+      "id": 2,
+      "name": "التعلم",
+      "description": "تعلم شيء جديد",
+      "completed": true,
+      "streak": 8
+    },
+    {
+      "id": 3,
+      "name": "إنجاز المهام",
+      "description": "إنهاء أهم مهمة",
+      "completed": true,
+      "streak": 15
+    },
+    {
+      "id": 4,
+      "name": "الرياضة",
+      "description": "نشاط يومي",
+      "completed": false,
+      "streak": 4
+    },
+    {
+      "id": 5,
+      "name": "التخطيط",
+      "description": "مراجعة اليوم",
+      "completed": true,
+      "streak": 11
+    },
+    {
+      "id": 6,
+      "name": "المراجعة",
+      "description": "مراجعة ما تم إنجازه",
+      "completed": false,
+      "streak": 3
+    },
+    {
+      "id": 7,
+      "name": "التطوير",
+      "description": "تحسين مشروع",
+      "completed": true,
+      "streak": 7
+    }
+  ],
+
+  "achievements": [
+    {
+      "id": 1,
+      "title": "البداية",
+      "description": "أكملت أول إنجاز لك.",
+      "icon": "✦",
+      "unlocked": true,
+      "date": "أكتوبر 2026"
+    },
+    {
+      "id": 2,
+      "title": "أول خطوة",
+      "description": "أكملت أول هدف.",
+      "icon": "➜",
+      "unlocked": true,
+      "date": "سبتمبر 2026"
+    },
+    {
+      "id": 3,
+      "title": "المثابرة",
+      "description": "حافظت على سلسلة إنجاز متواصلة.",
+      "icon": "◆",
+      "unlocked": true,
+      "date": "سبتمبر 2026"
+    },
+    {
+      "id": 4,
+      "title": "صانع الأثر",
+      "description": "أنجزت 10 أعمال مهمة.",
+      "icon": "✧",
+      "unlocked": true,
+      "date": "سبتمبر 2026"
+    },
+    {
+      "id": 5,
+      "title": "المتعلم",
+      "description": "أكملت 5 أهداف تعليمية.",
+      "icon": "▤",
+      "unlocked": true,
+      "date": "أغسطس 2026"
+    },
+    {
+      "id": 6,
+      "title": "المبدع",
+      "description": "أنشأت أول مشروع إبداعي.",
+      "icon": "◈",
+      "unlocked": true,
+      "date": "أغسطس 2026"
+    },
+    {
+      "id": 7,
+      "title": "المحترف",
+      "description": "وصلت إلى مستوى متقدم.",
+      "icon": "♢",
+      "unlocked": true,
+      "date": "أغسطس 2026"
+    },
+    {
+      "id": 8,
+      "title": "الأثر الأول",
+      "description": "حققت إنجازاً ترك أثراً واضحاً.",
+      "icon": "◎",
+      "unlocked": true,
+      "date": "يوليو 2026"
+    },
+    {
+      "id": 9,
+      "title": "الاستمرارية",
+      "description": "حافظت على تقدمك لمدة شهر.",
+      "icon": "∞",
+      "unlocked": true,
+      "date": "يوليو 2026"
+    },
+    {
+      "id": 10,
+      "title": "جامع الإنجازات",
+      "description": "جمعت 15 إنجازاً.",
+      "icon": "◇",
+      "unlocked": true,
+      "date": "يونيو 2026"
+    },
+    {
+      "id": 11,
+      "title": "صاحب الرؤية",
+      "description": "أكملت مشروعاً كبيراً.",
+      "icon": "◌",
+      "unlocked": true,
+      "date": "يونيو 2026"
+    },
+    {
+      "id": 12,
+      "title": "نحو القمة",
+      "description": "تجاوزت مستوى 70٪.",
+      "icon": "▲",
+      "unlocked": true,
+      "date": "مايو 2026"
+    },
+    {
+      "id": 13,
+      "title": "المئة",
+      "description": "أكمل 100 مهمة.",
+      "icon": "100",
+      "unlocked": false
+    },
+    {
+      "id": 14,
+      "title": "الرحلة",
+      "description": "حافظ على سلسلة 30 يوماً.",
+      "icon": "↗",
+      "unlocked": false
+    },
+    {
+      "id": 15,
+      "title": "الإنجاز الكبير",
+      "description": "أكمل هدفاً رئيسياً.",
+      "icon": "★",
+      "unlocked": false
+    },
+    {
+      "id": 16,
+      "title": "صانع المشاريع",
+      "description": "أنشئ 10 مشاريع.",
+      "icon": "▦",
+      "unlocked": false
+    }
+  ],
+
+  "progress": {
+    "weekly": [54, 59, 62, 67, 65, 73, 76, 78],
+    "monthly": [42, 47, 52, 58, 61, 69, 73, 78],
+    "yearly": [35, 40, 46, 52, 58, 65, 72, 78]
+  },
+
+  "activity": [
+    {
+      "title": "أكملت هدفاً",
+      "time": "اليوم · منذ ساعتين",
+      "icon": "✓"
+    },
+    {
+      "title": "سجلت إنجازاً جديداً",
+      "time": "اليوم · منذ 4 ساعات",
+      "icon": "✦"
+    },
+    {
+      "title": "طورت مهارة التصميم",
+      "time": "أمس",
+      "icon": "◆"
+    },
+    {
+      "title": "حافظت على سلسلة الإنجاز",
+      "time": "أمس",
+      "icon": "∞"
+    }
+  ],
+
+  "settings": {
+    "darkMode": false,
+    "notifications": true,
+    "sound": true,
+    "language": "ar",
+    "direction": "rtl"
+  }
+}

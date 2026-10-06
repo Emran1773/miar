@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link rel="icon" type="image/png" href="icon.jpeg">
+<link rel="apple-touch-icon" href="icon.jpeg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#123C2B">
+  <meta name="description" content="مِعيار — نظام ذكي لقياس تطورك وإنجازاتك وبناء تقدمك خطوة بخطوة.">
+  <title>مِعيار — قياس تطورك</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="app">
+
+    <!-- ==================== SIDEBAR ==================== -->
+    <aside class="sidebar" id="sidebar">
+
+      <div class="brand">
+        <div class="brand-icon">
+          <span></span>
+        </div>
+
+        <div class="brand-info">
+          <h1>مِعيار</h1>
+          <p>قِس تقدّمك</p>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+
+        <button class="nav-item active" data-page="dashboard">
+          <span class="nav-icon">⌂</span>
+          <span>الرئيسية</span>
+        </button>
+
+        <button class="nav-item" data-page="goals">
+          <span class="nav-icon">◎</span>
+          <span>الأهداف</span>
+        </button>
+
+        <button class="nav-item" data-page="skills">
+          <span class="nav-icon">◇</span>
+          <span>المهارات</span>
+        </button>
+
+        <button class="nav-item" data-page="habits">
+          <span class="nav-icon">✓</span>
+          <span>العادات</span>
+        </button>
+
+        <button class="nav-item" data-page="progress">
+          <span class="nav-icon">↗</span>
+          <span>التقدم</span>
+        </button>
+
+        <button class="nav-item" data-page="achievements">
+          <span class="nav-icon">✦</span>
+          <span>الإنجازات</span>
+        </button>
+
+      </nav>
+
+      <div class="sidebar-bottom">
+
+        <button class="nav-item" data-page="reports">
+          <span class="nav-icon">▤</span>
+          <span>التقارير</span>
+        </button>
+
+        <button class="nav-item" data-page="settings">
+          <span class="nav-icon">⚙</span>
+          <span>الإعدادات</span>
+        </button>
+
+      </div>
+
+      <div class="sidebar-profile">
+        <div class="profile-avatar">ع</div>
+
+        <div class="profile-details">
+          <strong id="sidebarUserName">عمران</strong>
+          <span>مستخدم مِعيار</span>
+        </div>
+
+        <button class="profile-menu" aria-label="خيارات الحساب">⋮</button>
+      </div>
+
+    </aside>
+
+
+    <!-- ==================== MAIN ==================== -->
+    <main class="main-content">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+
+        <button class="mobile-menu" id="mobileMenu" aria-label="فتح القائمة">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="page-heading">
+          <span class="greeting" id="greeting">صباح الخير، عمران</span>
+          <h2 id="pageTitle">لوحة التقدم</h2>
+        </div>
+
+        <div class="topbar-actions">
+
+          <button class="icon-button" id="searchButton" aria-label="البحث">
+            ⌕
+          </button>
+
+          <button class="icon-button notification-button" id="notificationButton" aria-label="الإشعارات">
+            ♧
+            <span class="notification-dot"></span>
+          </button>
+
+          <button class="user-button" id="userButton">
+            <span class="user-avatar">ع</span>
+            <span class="user-name">عمران</span>
+            <span class="user-arrow">⌄</span>
+          </button>
+
+        </div>
+
+      </header>
+
+
+      <!-- ==================== PAGE: DASHBOARD ==================== -->
+      <section class="page active-page" id="dashboardPage">
+
+        <div class="welcome-section">
+
+          <div>
+            <span class="section-eyebrow">ملخصك اليوم</span>
+            <h3>استمر في بناء تقدّمك.</h3>
+            <p>خطوة صغيرة اليوم تصنع فرقًا كبيرًا مع الوقت.</p>
+          </div>
+
+          <button class="primary-button" id="quickAddButton">
+            <span>＋</span>
+            إضافة تقدم
+          </button>
+
+        </div>
+
+
+        <!-- MAIN SCORE -->
+        <div class="hero-grid">
+
+          <article class="progress-card main-score-card">
+
+            <div class="card-top">
+              <div>
+                <span class="card-label">مؤشر مِعيار</span>
+                <h3>مستوى تقدمك</h3>
+              </div>
+
+              <button class="more-button">⋮</button>
+            </div>
+
+            <div class="score-area">
+
+              <div class="score-ring" id="scoreRing">
+                <div class="score-ring-inner">
+                  <strong id="mainScore">78</strong>
+                  <span>/ 100</span>
+                </div>
+              </div>
+
+              <div class="score-info">
+
+                <div class="score-change positive">
+                  <span>↑</span>
+                  <strong>8.4%</strong>
+                  <span>هذا الأسبوع</span>
+                </div>
+
+                <p>
+                  أداؤك يتحسن باستمرار.
+                  حافظ على الإيقاع الحالي للوصول إلى المستوى التالي.
+                </p>
+
+                <div class="level-row">
+                  <span>المستوى 7</span>
+                  <span>المستوى 8</span>
+                </div>
+
+                <div class="level-progress">
+                  <span style="width: 72%"></span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- TODAY -->
+          <article class="progress-card today-card">
+
+            <div class="card-top">
+              <div>
+                <span class="card-label">اليوم</span>
+                <h3>نشاطك</h3>
+              </div>
+
+              <span class="date-badge" id="todayDate">اليوم</span>
+            </div>
+
+            <div class="activity-stat">
+              <strong>6</strong>
+              <span>أنشطة مكتملة</span>
+            </div>
+
+            <div class="activity-list">
+
+              <div class="activity-item completed">
+                <span class="activity-check">✓</span>
+                <div>
+                  <strong>مراجعة الهدف الأسبوعي</strong>
+                  <small>08:30 ص</small>
+                </div>
+              </div>
+
+              <div class="activity-item completed">
+                <span class="activity-check">✓</span>
+                <div>
+                  <strong>جلسة تعلم</strong>
+                  <small>10:15 ص</small>
+                </div>
+              </div>
+
+              <div class="activity-item">
+                <span class="activity-check"></span>
+                <div>
+                  <strong>تحديث مستوى المهارة</strong>
+                  <small>متبقي</small>
+                </div>
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <!-- STATS -->
+        <div class="stats-grid">
+
+          <article class="stat-card">
+            <div class="stat-icon">◎</div>
+            <div>
+              <span>الأهداف النشطة</span>
+              <strong>8</strong>
+            </div>
+            <small class="stat-trend positive">+2 هذا الشهر</small>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon">◇</div>
+            <div>
+              <span>المهارات</span>
+              <strong>12</strong>
+            </div>
+            <small class="stat-trend positive">+3%</small>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon">✓</div>
+            <div>
+              <span>سلسلة الالتزام</span>
+              <strong>14</strong>
+            </div>
+            <small class="stat-trend">يومًا</small>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon">✦</div>
+            <div>
+              <span>الإنجازات</span>
+              <strong>27</strong>
+            </div>
+            <small class="stat-trend positive">+5</small>
+          </article>
+
+        </div>
+
+
+        <!-- ANALYTICS -->
+        <div class="content-grid">
+
+          <article class="progress-card chart-card">
+
+            <div class="card-top">
+
+              <div>
+                <span class="card-label">تحليل الأداء</span>
+                <h3>تطورك خلال الفترة</h3>
+              </div>
+
+              <div class="chart-filters">
+                <button class="chart-filter active" data-range="week">أسبوع</button>
+                <button class="chart-filter" data-range="month">شهر</button>
+                <button class="chart-filter" data-range="year">سنة</button>
+              </div>
+
+            </div>
+
+            <div class="chart-container">
+              <div class="chart-y">
+                <span>100</span>
+                <span>75</span>
+                <span>50</span>
+                <span>25</span>
+                <span>0</span>
+              </div>
+
+              <div class="chart-area">
+
+                <div class="chart-lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <svg class="progress-chart" viewBox="0 0 700 250" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-opacity=".20"/>
+                      <stop offset="100%" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+
+                  <path
+                    class="chart-fill"
+                    d="M0,185 C45,178 65,150 100,160 C145,173 165,125 210,135 C255,145 275,105 320,112 C365,120 385,92 430,103 C475,115 490,72 535,82 C580,91 610,55 650,65 C670,69 690,42 700,38 L700,250 L0,250 Z">
+                  </path>
+
+                  <path
+                    class="chart-line"
+                    d="M0,185 C45,178 65,150 100,160 C145,173 165,125 210,135 C255,145 275,105 320,112 C365,120 385,92 430,103 C475,115 490,72 535,82 C580,91 610,55 650,65 C670,69 690,42 700,38">
+                  </path>
+
+                  <circle cx="700" cy="38" r="6" class="chart-point"></circle>
+                </svg>
+
+                <div class="chart-x">
+                  <span>السبت</span>
+                  <span>الأحد</span>
+                  <span>الإثنين</span>
+                  <span>الثلاثاء</span>
+                  <span>الأربعاء</span>
+                  <span>الخميس</span>
+                  <span>الجمعة</span>
+                </div>
+
+              </div>
+            </div>
+
+          </article>
+
+
+          <!-- SKILLS -->
+          <article class="progress-card skills-card">
+
+            <div class="card-top">
+              <div>
+                <span class="card-label">أعلى المجالات</span>
+                <h3>مهاراتك</h3>
+              </div>
+
+              <button class="text-button" data-page="skills">عرض الكل</button>
+            </div>
+
+            <div class="skill-bars">
+
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span>البرمجة</span>
+                  <strong>91%</strong>
+                </div>
+                <div class="skill-track">
+                  <span style="width:91%"></span>
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span>التصميم</span>
+                  <strong>86%</strong>
+                </div>
+                <div class="skill-track">
+                  <span style="width:86%"></span>
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span>القراءة</span>
+                  <strong>78%</strong>
+                </div>
+                <div class="skill-track">
+                  <span style="width:78%"></span>
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span>اللغة</span>
+                  <strong>72%</strong>
+                </div>
+                <div class="skill-track">
+                  <span style="width:72%"></span>
+                </div>
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <!-- GOALS + ACHIEVEMENTS -->
+        <div class="content-grid lower-grid">
+
+          <article class="progress-card goals-preview">
+
+            <div class="card-top">
+              <div>
+                <span class="card-label">التركيز الحالي</span>
+                <h3>أهدافك</h3>
+              </div>
+
+              <button class="text-button" data-page="goals">كل الأهداف</button>
+            </div>
+
+            <div class="goal-list">
+
+              <div class="goal-item">
+
+                <div class="goal-icon">⌘</div>
+
+                <div class="goal-content">
+                  <div class="goal-heading">
+                    <strong>إكمال مشروع الموقع</strong>
+                    <span>82%</span>
+                  </div>
+
+                  <div class="goal-track">
+                    <span style="width:82%"></span>
+                  </div>
+
+                  <small>موعد الإنجاز: 18 أكتوبر</small>
+                </div>
+
+              </div>
+
+              <div class="goal-item">
+
+                <div class="goal-icon">◇</div>
+
+                <div class="goal-content">
+                  <div class="goal-heading">
+                    <strong>تطوير مهارة جديدة</strong>
+                    <span>64%</span>
+                  </div>
+
+                  <div class="goal-track">
+                    <span style="width:64%"></span>
+                  </div>
+
+                  <small>موعد الإنجاز: 25 أكتوبر</small>
+                </div>
+
+              </div>
+
+              <div class="goal-item">
+
+                <div class="goal-icon">▱</div>
+
+                <div class="goal-content">
+                  <div class="goal-heading">
+                    <strong>قراءة 4 كتب</strong>
+                    <span>50%</span>
+                  </div>
+
+                  <div class="goal-track">
+                    <span style="width:50%"></span>
+                  </div>
+
+                  <small>موعد الإنجاز: 31 أكتوبر</small>
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="progress-card achievements-preview">
+
+            <div class="card-top">
+              <div>
+                <span class="card-label">آخر ما حققته</span>
+                <h3>إنجازاتك</h3>
+              </div>
+
+              <button class="text-button" data-page="achievements">عرض الكل</button>
+            </div>
+
+            <div class="achievement-list">
+
+              <div class="achievement-item">
+                <div class="achievement-badge">✦</div>
+                <div>
+                  <strong>أسبوع متواصل</strong>
+                  <small>التزمت بأهدافك 7 أيام متتالية</small>
+                </div>
+                <time>اليوم</time>
+              </div>
+
+              <div class="achievement-item">
+                <div class="achievement-badge">↗</div>
+                <div>
+                  <strong>تقدم ملحوظ</strong>
+                  <small>رفعت مؤشر تقدمك بنسبة 8%</small>
+                </div>
+                <time>أمس</time>
+              </div>
+
+              <div class="achievement-item">
+                <div class="achievement-badge">◇</div>
+                <div>
+                  <strong>مهارة جديدة</strong>
+                  <small>أضفت مهارة إلى مسارك</small>
+                </div>
+                <time>قبل 3 أيام</time>
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==================== GOALS PAGE ==================== -->
+      <section class="page" id="goalsPage">
+
+        <div class="page-toolbar">
+
+          <div>
+            <span class="section-eyebrow">مسارك</span>
+            <h3>الأهداف</h3>
+            <p>حوّل طموحاتك إلى تقدم يمكن قياسه.</p>
+          </div>
+
+          <button class="primary-button" id="addGoalButton">
+            ＋ هدف جديد
+          </button>
+
+        </div>
+
+        <div class="goal-stats">
+          <div class="mini-stat">
+            <span>الأهداف النشطة</span>
+            <strong>8</strong>
+          </div>
+          <div class="mini-stat">
+            <span>مكتملة</span>
+            <strong>19</strong>
+          </div>
+          <div class="mini-stat">
+            <span>متأخرة</span>
+            <strong>1</strong>
+          </div>
+          <div class="mini-stat">
+            <span>معدل الإنجاز</span>
+            <strong>84%</strong>
+          </div>
+        </div>
+
+        <div class="goals-page-grid">
+
+          <article class="goal-large-card">
+            <div class="goal-large-head">
+              <span class="goal-category">مشروع</span>
+              <button class="more-button">⋮</button>
+            </div>
+
+            <div class="large-goal-icon">⌘</div>
+
+            <h3>إكمال مشروع الموقع</h3>
+            <p>الوصول بالمشروع إلى نسخة مستقرة وجاهزة للنشر.</p>
+
+            <div class="large-progress">
+              <div>
+                <span>التقدم</span>
+                <strong>82%</strong>
+              </div>
+              <div class="large-progress-track">
+                <span style="width:82%"></span>
+              </div>
+            </div>
+
+            <div class="goal-meta">
+              <span>18 أكتوبر</span>
+              <span>4 مهام متبقية</span>
+            </div>
+          </article>
+
+
+          <article class="goal-large-card">
+            <div class="goal-large-head">
+              <span class="goal-category">تعلم</span>
+              <button class="more-button">⋮</button>
+            </div>
+
+            <div class="large-goal-icon">◇</div>
+
+            <h3>تطوير مهارة جديدة</h3>
+            <p>رفع مستوى مهارة جديدة من البداية إلى مستوى متقدم.</p>
+
+            <div class="large-progress">
+              <div>
+                <span>التقدم</span>
+                <strong>64%</strong>
+              </div>
+              <div class="large-progress-track">
+                <span style="width:64%"></span>
+              </div>
+            </div>
+
+            <div class="goal-meta">
+              <span>25 أكتوبر</span>
+              <span>7 مهام متبقية</span>
+            </div>
+          </article>
+
+
+          <article class="goal-large-card">
+            <div class="goal-large-head">
+              <span class="goal-category">قراءة</span>
+              <button class="more-button">⋮</button>
+            </div>
+
+            <div class="large-goal-icon">▱</div>
+
+            <h3>قراءة 4 كتب</h3>
+            <p>إنهاء أربعة كتب وتسجيل أهم الأفكار المستفادة منها.</p>
+
+            <div class="large-progress">
+              <div>
+                <span>التقدم</span>
+                <strong>50%</strong>
+              </div>
+              <div class="large-progress-track">
+                <span style="width:50%"></span>
+              </div>
+            </div>
+
+            <div class="goal-meta">
+              <span>31 أكتوبر</span>
+              <span>كتابان متبقيان</span>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==================== SKILLS PAGE ==================== -->
+      <section class="page" id="skillsPage">
+
+        <div class="page-toolbar">
+
+          <div>
+            <span class="section-eyebrow">قدراتك</span>
+            <h3>المهارات</h3>
+            <p>تابع كيف تتطور مهاراتك مع الوقت.</p>
+          </div>
+
+          <button class="primary-button" id="addSkillButton">
+            ＋ مهارة جديدة
+          </button>
+
+        </div>
+
+        <div class="skills-overview">
+
+          <article class="skill-overview-card featured">
+            <span>متوسط المهارات</span>
+            <strong>81%</strong>
+            <small>↑ 6.2% منذ الشهر الماضي</small>
+          </article>
+
+          <article class="skill-overview-card">
+            <span>مهارات متقدمة</span>
+            <strong>5</strong>
+            <small>من أصل 12 مهارة</small>
+          </article>
+
+          <article class="skill-overview-card">
+            <span>ساعات التعلم</span>
+            <strong>42</strong>
+            <small>هذا الشهر</small>
+          </article>
+
+        </div>
+
+        <div class="all-skills">
+
+          <article class="skill-detail-card">
+            <div class="skill-detail-icon">⌘</div>
+            <div class="skill-detail-content">
+              <div class="skill-detail-title">
+                <h3>البرمجة</h3>
+                <strong>91%</strong>
+              </div>
+              <p>متقدم</p>
+              <div class="detail-track"><span style="width:91%"></span></div>
+              <small>آخر تحديث: اليوم</small>
+            </div>
+          </article>
+
+          <article class="skill-detail-card">
+            <div class="skill-detail-icon">◇</div>
+            <div class="skill-detail-content">
+              <div class="skill-detail-title">
+                <h3>التصميم</h3>
+                <strong>86%</strong>
+              </div>
+              <p>متقدم</p>
+              <div class="detail-track"><span style="width:86%"></span></div>
+              <small>آخر تحديث: أمس</small>
+            </div>
+          </article>
+
+          <article class="skill-detail-card">
+            <div class="skill-detail-icon">▱</div>
+            <div class="skill-detail-content">
+              <div class="skill-detail-title">
+                <h3>القراءة</h3>
+                <strong>78%</strong>
+              </div>
+              <p>جيد جدًا</p>
+              <div class="detail-track"><span style="width:78%"></span></div>
+              <small>آخر تحديث: قبل يومين</small>
+            </div>
+          </article>
+
+          <article class="skill-detail-card">
+            <div class="skill-detail-icon">A</div>
+            <div class="skill-detail-content">
+              <div class="skill-detail-title">
+                <h3>اللغة</h3>
+                <strong>72%</strong>
+              </div>
+              <p>جيد جدًا</p>
+              <div class="detail-track"><span style="width:72%"></span></div>
+              <small>آخر تحديث: قبل 4 أيام</small>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==================== HABITS PAGE ==================== -->
+      <section class="page" id="habitsPage">
+
+        <div class="page-toolbar">
+
+          <div>
+            <span class="section-eyebrow">الاستمرارية</span>
+            <h3>العادات</h3>
+            <p>النتائج الكبيرة تبدأ بتكرار الأشياء الصغيرة.</p>
+          </div>
+
+          <button class="primary-button" id="addHabitButton">
+            ＋ عادة جديدة
+          </button>
+
+        </div>
+
+        <div class="habit-summary">
+
+          <div>
+            <span>نسبة الالتزام</span>
+            <strong>87%</strong>
+          </div>
+
+          <div>
+            <span>أفضل سلسلة</span>
+            <strong>21 يومًا</strong>
+          </div>
+
+          <div>
+            <span>اليوم</span>
+            <strong>5 / 6</strong>
+          </div>
+
+        </div>
+
+        <div class="habits-list">
+
+          <div class="habit-card">
+            <button class="habit-check checked">✓</button>
+            <div>
+              <strong>القراءة اليومية</strong>
+              <small>30 دقيقة يوميًا</small>
+            </div>
+            <span class="habit-streak">🔥 14</span>
+            <button class="more-button">⋮</button>
+          </div>
+
+          <div class="habit-card">
+            <button class="habit-check checked">✓</button>
+            <div>
+              <strong>التعلم</strong>
+              <small>45 دقيقة يوميًا</small>
+            </div>
+            <span class="habit-streak">🔥 9</span>
+            <button class="more-button">⋮</button>
+          </div>
+
+          <div class="habit-card">
+            <button class="habit-check"> </button>
+            <div>
+              <strong>مراجعة الأهداف</strong>
+              <small>10 دقائق مساءً</small>
+            </div>
+            <span class="habit-streak">🔥 6</span>
+            <button class="more-button">⋮</button>
+          </div>
+
+          <div class="habit-card">
+            <button class="habit-check checked">✓</button>
+            <div>
+              <strong>التدريب</strong>
+              <small>حسب الخطة</small>
+            </div>
+            <span class="habit-streak">🔥 18</span>
+            <button class="more-button">⋮</button>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==================== PROGRESS PAGE ==================== -->
+      <section class="page" id="progressPage">
+
+        <div class="page-toolbar">
+          <div>
+            <span class="section-eyebrow">البيانات</span>
+            <h3>التقدم</h3>
+            <p>الصورة الكاملة لتطورك.</p>
+          </div>
+        </div>
+
+        <div class="progress-metrics">
+
+          <article class="metric-card">
+            <span>مؤشر التقدم</span>
+            <strong>78</strong>
+            <small class="positive">↑ 8.4%</small>
+          </article>
+
+          <article class="metric-card">
+            <span>معدل الإنجاز</span>
+            <strong>84%</strong>
+            <small class="positive">↑ 4.1%</small>
+          </article>
+
+          <article class="metric-card">
+            <span>الالتزام</span>
+            <strong>87%</strong>
+            <small class="positive">↑ 3.7%</small>
+          </article>
+
+          <article class="metric-card">
+            <span>إجمالي الساعات</span>
+            <strong>126</strong>
+            <small>هذا الشهر</small>
+          </article>
+
+        </div>
+
+        <article class="progress-card full-chart">
+          <div class="card-top">
+            <div>
+              <span class="card-label">التطور العام</span>
+              <h3>مؤشر مِعيار عبر الوقت</h3>
+            </div>
+          </div>
+
+          <div class="big-chart-placeholder">
+            <div class="big-chart-grid"></div>
+
+            <svg viewBox="0 0 1000 350" preserveAspectRatio="none">
+              <path
+                class="big-chart-fill"
+                d="M0 285 C90 270 130 250 200 260 C270 270 310 210 390 225 C470 240 520 175 590 190 C660 205 710 130 780 150 C850 170 900 90 1000 65 L1000 350 L0 350 Z">
+              </path>
+              <path
+                class="big-chart-line"
+                d="M0 285 C90 270 130 250 200 260 C270 270 310 210 390 225 C470 240 520 175 590 190 C660 205 710 130 780 150 C850 170 900 90 1000 65">
+              </path>
+            </svg>
+          </div>
+        </article>
+
+      </section>
+
+
+      <!-- ==================== ACHIEVEMENTS PAGE ==================== -->
+      <section class="page" id="achievementsPage">
+
+        <div class="page-toolbar">
+
+          <div>
+            <span class="section-eyebrow">ما صنعتَه</span>
+            <h3>الإنجازات</h3>
+            <p>كل إنجاز صغير يستحق أن يُحفظ.</p>
+          </div>
+
+        </div>
+
+        <div class="achievement-summary">
+          <div>
+            <strong>27</strong>
+            <span>إنجازًا</span>
+          </div>
+          <div>
+            <strong>8</strong>
+            <span>هذا الشهر</span>
+          </div>
+          <div>
+            <strong>14</strong>
+            <span>يومًا متتاليًا</span>
+          </div>
+        </div>
+
+        <div class="achievements-grid">
+
+          <article class="achievement-card unlocked">
+            <div class="achievement-large-icon">✦</div>
+            <h3>أسبوع متواصل</h3>
+            <p>التزمت بأهدافك لمدة سبعة أيام متتالية.</p>
+            <span>مكتمل اليوم</span>
+          </article>
+
+          <article class="achievement-card unlocked">
+            <div class="achievement-large-icon">↗</div>
+            <h3>تقدم ملحوظ</h3>
+            <p>رفعت مؤشر تقدمك بنسبة 8% خلال أسبوع واحد.</p>
+            <span>مكتمل أمس</span>
+          </article>
+
+          <article class="achievement-card unlocked">
+            <div class="achievement-large-icon">◇</div>
+            <h3>مهارة جديدة</h3>
+            <p>أضفت مهارة جديدة إلى مسارك وبدأت تطويرها.</p>
+            <span>مكتمل منذ 3 أيام</span>
+          </article>
+
+          <article class="achievement-card locked">
+            <div class="achievement-large-icon">◌</div>
+            <h3>ثلاثون يومًا</h3>
+            <p>حافظ على سلسلة الالتزام لمدة 30 يومًا.</p>
+            <span>قيد الإنجاز</span>
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==================== REPORTS PAGE ==================== -->
+      <section class="page" id="reportsPage">
+
+        <div class="page-toolbar">
+          <div>
+            <span class="section-eyebrow">رؤية أعمق</span>
+            <h3>التقارير</h3>
+            <p>افهم أين كنت، وأين أصبحت، وإلى أين تتجه.</p>
+          </div>
+
+          <button class="secondary-button" id="exportReportButton">
+            ↓ تصدير التقرير
+          </button>
+        </div>
+
+        <div class="report-grid">
+
+          <article class="report-card">
+            <span>هذا الأسبوع</span>
+            <strong>78 / 100</strong>
+            <small class="positive">تحسن بنسبة 8.4%</small>
+          </article>
+
+          <article class="report-card">
+            <span>أفضل مجال</span>
+            <strong>البرمجة</strong>
+            <small>91% مستوى حالي</small>
+          </article>
+
+          <article class="report-card">
+            <span>أكبر تحسن</span>
+            <strong>التصميم</strong>
+            <small class="positive">+12% هذا الشهر</small>
+          </article>
+
+          <article class="report-card">
+            <span>الاستمرارية</span>
+            <strong>87%</strong>
+            <small>معدل الالتزام</small>
+          </article>
+
+        </div>
+
+        <article class="progress-card report-insight">
+          <div class="card-top">
+            <div>
+              <span class="card-label">مِعيار يقترح</span>
+              <h3>ملاحظة هذا الأسبوع</h3>
+            </div>
+          </div>
+
+          <div class="insight-content">
+            <div class="insight-icon">✦</div>
+            <div>
+              <h4>أداؤك يتحسن عندما توزّع الجهد على أيام الأسبوع.</h4>
+              <p>
+                تظهر بياناتك أن الاستمرارية اليومية ترتبط بارتفاع مؤشر التقدم.
+                حافظ على الجلسات القصيرة المنتظمة بدل تجميع المهام في يوم واحد.
+              </p>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+
+      <!-- ==================== SETTINGS PAGE ==================== -->
+      <section class="page" id="settingsPage">
+
+        <div class="page-toolbar">
+          <div>
+            <span class="section-eyebrow">التخصيص</span>
+            <h3>الإعدادات</h3>
+            <p>اجعل مِعيار مناسبًا لطريقتك.</p>
+          </div>
+        </div>
+
+        <div class="settings-layout">
+
+          <aside class="settings-nav">
+            <button class="settings-tab active">الحساب</button>
+            <button class="settings-tab">المظهر</button>
+            <button class="settings-tab">الإشعارات</button>
+            <button class="settings-tab">البيانات</button>
+          </aside>
+
+          <div class="settings-content">
+
+            <article class="settings-card">
+
+              <div class="settings-card-heading">
+                <div>
+                  <h3>المعلومات الشخصية</h3>
+                  <p>هذه المعلومات تظهر في ملفك داخل مِعيار.</p>
+                </div>
+              </div>
+
+              <div class="form-grid">
+
+                <label class="form-field">
+                  <span>الاسم</span>
+                  <input type="text" id="nameInput" value="عمران">
+                </label>
+
+                <label class="form-field">
+                  <span>وصف مختصر</span>
+                  <input type="text" value="أعمل على تطوير نفسي باستمرار">
+                </label>
+
+              </div>
+
+              <button class="primary-button" id="saveProfileButton">
+                حفظ التغييرات
+              </button>
+
+            </article>
+
+
+            <article class="settings-card">
+
+              <div class="settings-card-heading">
+                <div>
+                  <h3>المظهر</h3>
+                  <p>اختر المظهر الذي يناسبك.</p>
+                </div>
+              </div>
+
+              <div class="theme-options">
+
+                <button class="theme-option active" data-theme="light">
+                  <span class="theme-preview light-preview"></span>
+                  <strong>فاتح</strong>
+                </button>
+
+                <button class="theme-option" data-theme="dark">
+                  <span class="theme-preview dark-preview"></span>
+                  <strong>داكن</strong>
+                </button>
+
+                <button class="theme-option" data-theme="system">
+                  <span class="theme-preview system-preview"></span>
+                  <strong>النظام</strong>
+                </button>
+
+              </div>
+
+            </article>
+
+
+            <article class="settings-card">
+
+              <div class="settings-card-heading">
+                <div>
+                  <h3>الإشعارات</h3>
+                  <p>تحكم في التنبيهات التي تريد استقبالها.</p>
+                </div>
+              </div>
+
+              <div class="setting-row">
+                <div>
+                  <strong>تذكير الأهداف</strong>
+                  <span>تنبيهك عند اقتراب موعد هدف.</span>
+                </div>
+
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span></span>
+                </label>
+              </div>
+
+              <div class="setting-row">
+                <div>
+                  <strong>ملخص يومي</strong>
+                  <span>ملخص سريع لنشاطك في نهاية اليوم.</span>
+                </div>
+
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span></span>
+                </label>
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- ==================== SEARCH OVERLAY ==================== -->
+  <div class="overlay" id="searchOverlay">
+
+    <div class="search-modal">
+
+      <div class="search-modal-head">
+        <h3>البحث في مِعيار</h3>
+        <button class="close-button" id="closeSearch">×</button>
+      </div>
+
+      <div class="search-input-wrapper">
+        <span>⌕</span>
+        <input type="search" id="globalSearch" placeholder="ابحث عن هدف، مهارة، إنجاز...">
+      </div>
+
+      <div class="search-results" id="searchResults">
+        <p class="empty-search">ابدأ بكتابة ما تبحث عنه.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== QUICK ADD MODAL ==================== -->
+  <div class="overlay" id="quickAddModal">
+
+    <div class="modal">
+
+      <div class="modal-head">
+        <div>
+          <span class="section-eyebrow">إضافة سريعة</span>
+          <h3>سجّل تقدمًا جديدًا</h3>
+        </div>
+
+        <button class="close-button" id="closeQuickAdd">×</button>
+      </div>
+
+      <div class="quick-actions">
+
+        <button class="quick-action" data-action="goal">
+          <span>◎</span>
+          <strong>هدف</strong>
+          <small>أنشئ هدفًا جديدًا</small>
+        </button>
+
+        <button class="quick-action" data-action="skill">
+          <span>◇</span>
+          <strong>مهارة</strong>
+          <small>حدّث مستوى مهارة</small>
+        </button>
+
+        <button class="quick-action" data-action="habit">
+          <span>✓</span>
+          <strong>عادة</strong>
+          <small>سجّل عادة اليوم</small>
+        </button>
+
+        <button class="quick-action" data-action="achievement">
+          <span>✦</span>
+          <strong>إنجاز</strong>
+          <small>أضف إنجازًا</small>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== GOAL MODAL ==================== -->
+  <div class="overlay" id="goalModal">
+
+    <div class="modal form-modal">
+
+      <div class="modal-head">
+        <div>
+          <span class="section-eyebrow">هدف جديد</span>
+          <h3>أنشئ هدفًا</h3>
+        </div>
+
+        <button class="close-button" id="closeGoalModal">×</button>
+      </div>
+
+      <form id="goalForm">
+
+        <label class="form-field">
+          <span>اسم الهدف</span>
+          <input type="text" id="goalName" placeholder="مثال: إكمال مشروع..." required>
+        </label>
+
+        <label class="form-field">
+          <span>الوصف</span>
+          <textarea id="goalDescription" rows="3" placeholder="ماذا تريد أن تحقق؟"></textarea>
+        </label>
+
+        <div class="form-grid">
+
+          <label class="form-field">
+            <span>التصنيف</span>
+            <select id="goalCategory">
+              <option>مشروع</option>
+              <option>تعلم</option>
+              <option>قراءة</option>
+              <option>شخصي</option>
+              <option>عمل</option>
+            </select>
+          </label>
+
+          <label class="form-field">
+            <span>تاريخ الإنجاز</span>
+            <input type="date" id="goalDate">
+          </label>
+
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="secondary-button" id="cancelGoal">إلغاء</button>
+          <button type="submit" class="primary-button">إضافة الهدف</button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== TOAST ==================== -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✓</span>
+    <span id="toastMessage">تم الحفظ بنجاح</span>
+  </div>
+
+
+  <script src="data.json"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
